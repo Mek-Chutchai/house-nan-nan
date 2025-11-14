@@ -8,11 +8,11 @@
     <!-- SEO -->
     <meta
       name="description"
-      content="ห้องพักสะอาด สะดวกสบาย ราคา 2,500 บาท/เดือน ปางหมู แม่ฮ่องสอน พร้อม WiFi ฟรี"
+      content="ห้องพักสะอาด สะดวกสบาย ราคา 2,500 บาท/เดือน ปางหมู แม่ฮ่องสอน พร้อม WiFi ฟรี น้ำไฟฟรี"
     />
     <meta
       name="keywords"
-      content="ห้องเช่า, แม่ฮ่องสอน, ปางหมู, room rental Thailand"
+      content="ห้องเช่า, แม่ฮ่องสอน, ปางหมู, room rental Thailand, affordable room"
     />
 
     <!-- Favicon -->
@@ -31,6 +31,16 @@
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Animate.css CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <script>
       tailwind.config = {
         theme: {
@@ -49,9 +59,6 @@
       };
     </script>
 
-    <!-- Three.js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
     <style>
       * {
         font-family: "Kanit", sans-serif;
@@ -68,14 +75,23 @@
         position: relative;
         z-index: 10;
       }
+      .instagram-card {
+        aspect-ratio: 1;
+        overflow: hidden;
+      }
+      .instagram-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     </style>
   </head>
 
-  <body class="bg-white text-gray-800 antialiased">
+  <body class="bg-gray-50 text-gray-800 antialiased">
     <!-- Language Toggle Button -->
     <button
       id="langToggle"
-      class="fixed top-4 right-4 z-50 bg-accent-orange text-white px-4 py-2 rounded-full shadow-lg hover:bg-orange-600 transition-all duration-300 font-medium text-sm"
+      class="fixed top-4 right-4 z-50 bg-accent-orange text-white px-5 py-2.5 rounded-full shadow-lg hover:bg-orange-600 transition-all duration-300 font-medium text-sm animate__animated animate__fadeInDown animate__delay-1s"
     >
       🌐 English
     </button>
@@ -90,12 +106,12 @@
         <!-- Thai Content (Default) -->
         <div id="content-th" class="space-y-6">
           <h1
-            class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight"
+            class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight animate__animated animate__fadeInDown"
           >
             📣 เปิดจองห้องพัก 🏠
           </h1>
           <p
-            class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed"
+            class="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed animate__animated animate__fadeInDown animate__delay-1s"
           >
             ห้องพัก นาน นาน อยู่ที่ 732 บ้านทุ่งกองมู หมู่ 3<br
               class="hidden md:block"
@@ -103,17 +119,17 @@
             ระหว่างซอย 2 และ ซอย 3 ถนนกุงลมพัฒนา ตำบล ปางหมู
           </p>
           <div
-            class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 animate__animated animate__bounceIn animate__delay-2s"
           >
             <a
               href="#details"
-              class="bg-accent-orange text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              class="bg-accent-orange text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-orange-600 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
             >
               ดูรายละเอียด
             </a>
             <a
               href="tel:0931817616"
-              class="bg-white text-accent-orange border-2 border-accent-orange px-8 py-4 rounded-full font-medium text-lg hover:bg-accent-light transition-all duration-300"
+              class="bg-white text-accent-orange border-2 border-accent-orange px-10 py-4 rounded-full font-semibold text-lg hover:bg-accent-light transition-all duration-300 shadow-lg"
             >
               📞 โทรเลย
             </a>
@@ -123,28 +139,28 @@
         <!-- English Content (Hidden by default) -->
         <div id="content-en" class="space-y-6 hidden">
           <h1
-            class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight"
+            class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight animate__animated animate__fadeInDown"
           >
             Find Your Perfect Room<br />in Thailand
           </h1>
           <p
-            class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-light"
+            class="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed animate__animated animate__fadeInDown animate__delay-1s"
           >
             Modern spaces for work, study, or relaxation.<br />
             Comfortable living in the heart of Mae Hong Son.
           </p>
           <div
-            class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 animate__animated animate__bounceIn animate__delay-2s"
           >
             <a
               href="#details"
-              class="bg-accent-orange text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              class="bg-accent-orange text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-orange-600 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
             >
               Explore Rooms
             </a>
             <a
               href="tel:0931817616"
-              class="bg-white text-accent-orange border-2 border-accent-orange px-8 py-4 rounded-full font-medium text-lg hover:bg-accent-light transition-all duration-300"
+              class="bg-white text-accent-orange border-2 border-accent-orange px-10 py-4 rounded-full font-semibold text-lg hover:bg-accent-light transition-all duration-300 shadow-lg"
             >
               📞 Call Now
             </a>
@@ -175,86 +191,100 @@
     <!-- Main Content -->
     <main>
       <!-- About/Details Section -->
-      <section id="details" class="py-16 md:py-24 bg-white">
+      <section id="details" class="py-20 md:py-28 bg-white">
         <div class="container mx-auto px-4">
           <!-- Thai Content -->
           <div
             id="details-th"
-            class="grid md:grid-cols-2 gap-8 md:gap-12 items-center"
+            class="grid md:grid-cols-2 gap-10 md:gap-16 items-center"
           >
-            <div class="space-y-6">
-              <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+            <div
+              class="space-y-6 animate-on-scroll"
+              data-animation="slideInLeft"
+            >
+              <h2 class="text-3xl md:text-5xl font-bold text-gray-900">
                 รายละเอียดห้องพัก
               </h2>
 
               <div class="space-y-4 text-gray-700 leading-relaxed">
-                <p class="flex items-start gap-2">
-                  <span class="text-2xl">📌</span>
+                <p class="flex items-start gap-3 text-lg">
+                  <span class="text-3xl">📌</span>
                   <span
                     >ห้องพัก นาน นาน อยู่ที่ 732 บ้านทุ่งกองมู หมู่ 3 ระหว่างซอย
                     2 และ ซอย 3 ถนนกุงลมพัฒนา ตำบล ปางหมู</span
                   >
                 </p>
 
-                <p class="flex items-start gap-2">
-                  <span class="text-2xl">🗺️</span>
+                <p class="flex items-start gap-3">
+                  <span class="text-3xl">🗺️</span>
                   <a
                     href="https://maps.app.goo.gl/gTUSwrkpVAmQEoG36"
                     target="_blank"
-                    class="text-accent-orange hover:underline"
+                    class="text-accent-orange hover:underline font-medium"
                   >
                     ดูพิกัดบน Google Maps
                   </a>
                 </p>
 
-                <div class="bg-accent-light rounded-2xl p-6 space-y-3">
-                  <p class="flex items-center gap-2">
-                    <span>🏠</span> ห้องพักมี 10 ห้อง (ว่างให้เช่าทุกห้อง)
+                <div
+                  class="bg-accent-light rounded-3xl p-8 space-y-3 shadow-lg"
+                >
+                  <p class="flex items-center gap-3 text-lg">
+                    <span class="text-2xl">🏠</span> ห้องพักมี 10 ห้อง
+                    (ว่างให้เช่าทุกห้อง)
                   </p>
-                  <p class="flex items-center gap-2">
-                    <span>🔹</span> มีพัดลม เครื่องทำน้ำอุ่น เตียงพร้อมที่นอน
+                  <p class="flex items-center gap-3 text-lg">
+                    <span class="text-2xl">📏</span> ห้องทั้งหมดมีขนาดเดียวกัน
                   </p>
-                  <p class="flex items-center gap-2">
-                    <span>📷</span> มีกล้องวงจรปิด
+                  <p class="flex items-center gap-3">
+                    <span class="text-2xl">🔹</span> มีพัดลม เครื่องทำน้ำอุ่น
+                    เตียงพร้อมที่นอน
                   </p>
-                  <p class="flex items-center gap-2">
-                    <span>🌐</span> มี Wifi ฟรี
+                  <p class="flex items-center gap-3">
+                    <span class="text-2xl">📷</span> มีกล้องวงจรปิด
                   </p>
-                  <p class="flex items-center gap-2">
-                    <span>💧⚡</span> น้ำไฟฟรี
+                  <p class="flex items-center gap-3">
+                    <span class="text-2xl">🌐</span> มี Wifi ฟรี
                   </p>
-                  <p class="flex items-center gap-2">
-                    <span>👤</span> สำหรับ 1 คนต่อ 1 ห้อง
+                  <p class="flex items-center gap-3">
+                    <span class="text-2xl">💧⚡</span> น้ำไฟฟรี
+                  </p>
+                  <p class="flex items-center gap-3">
+                    <span class="text-2xl">👤</span> สำหรับ 1 คนต่อ 1 ห้อง
                   </p>
                 </div>
 
                 <div
-                  class="bg-accent-orange text-white rounded-2xl p-6 text-center"
+                  class="bg-gradient-to-r from-accent-orange to-orange-500 text-white rounded-3xl p-8 text-center shadow-xl"
                 >
-                  <p class="text-2xl font-bold">💰 2,500 บาท/เดือน</p>
+                  <p class="text-3xl md:text-4xl font-bold">
+                    💰 2,500 บาท/เดือน
+                  </p>
                 </div>
 
-                <p class="text-sm text-gray-600">
+                <p class="text-base text-gray-600 leading-relaxed pt-2">
                   📅 สามารถเข้ามาอยู่ได้ ตอนสิ้นเดือนนี้ (วันที่ 1 พฤศจิกายน)<br />
-                  🔍 สามารถสอบถามรายละเอียดและมาเข้าชมได้<br />
                   📱 โทร.
                   <a
                     href="tel:0931817616"
-                    class="text-accent-orange hover:underline font-medium"
+                    class="text-accent-orange hover:underline font-semibold"
                     >093-181-7616</a
                   >
                 </p>
               </div>
             </div>
 
-            <div class="relative">
+            <div
+              class="relative animate-on-scroll"
+              data-animation="fadeInRight"
+            >
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png"
+                src="./houseImage/houseImage.jpg"
                 alt="Room Image"
-                class="w-full rounded-2xl shadow-2xl"
+                class="w-full rounded-3xl shadow-2xl"
               />
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"
+                class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-3xl"
               ></div>
             </div>
           </div>
@@ -262,16 +292,19 @@
           <!-- English Content -->
           <div
             id="details-en"
-            class="grid md:grid-cols-2 gap-8 md:gap-12 items-center hidden"
+            class="grid md:grid-cols-2 gap-10 md:gap-16 items-center hidden"
           >
-            <div class="space-y-6">
-              <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+            <div
+              class="space-y-6 animate-on-scroll"
+              data-animation="slideInLeft"
+            >
+              <h2 class="text-3xl md:text-5xl font-bold text-gray-900">
                 Room Details
               </h2>
 
               <div class="space-y-4 text-gray-700 leading-relaxed">
-                <p class="flex items-start gap-2">
-                  <span class="text-2xl">📌</span>
+                <p class="flex items-start gap-3 text-lg">
+                  <span class="text-3xl">📌</span>
                   <span
                     >Naan Naan Room located at 732 Ban Thung Kong Moo, Moo 3,
                     between Soi 2 and Soi 3, Kunglomp Pattana Road, Pang
@@ -279,167 +312,221 @@
                   >
                 </p>
 
-                <p class="flex items-start gap-2">
-                  <span class="text-2xl">🗺️</span>
+                <p class="flex items-start gap-3">
+                  <span class="text-3xl">🗺️</span>
                   <a
                     href="https://maps.app.goo.gl/gTUSwrkpVAmQEoG36"
                     target="_blank"
-                    class="text-accent-orange hover:underline"
+                    class="text-accent-orange hover:underline font-medium"
                   >
                     View on Google Maps
                   </a>
                 </p>
 
-                <div class="bg-accent-light rounded-2xl p-6 space-y-3">
-                  <p class="flex items-center gap-2">
-                    <span>🏠</span> 10 rooms available (all vacant)
+                <div
+                  class="bg-accent-light rounded-3xl p-8 space-y-3 shadow-lg"
+                >
+                  <p class="flex items-center gap-3 text-lg">
+                    <span class="text-2xl">🏠</span> 10 rooms available (all
+                    vacant)
                   </p>
-                  <p class="flex items-center gap-2">
-                    <span>🔹</span> Fan, water heater, bed with mattress
+                  <p class="flex items-center gap-3 text-lg">
+                    <span class="text-2xl">📏</span> All rooms are the same size
                   </p>
-                  <p class="flex items-center gap-2">
-                    <span>📷</span> CCTV security
+                  <p class="flex items-center gap-3">
+                    <span class="text-2xl">🔹</span> Fan, water heater, bed with
+                    mattress
                   </p>
-                  <p class="flex items-center gap-2">
-                    <span>🌐</span> Free WiFi
+                  <p class="flex items-center gap-3">
+                    <span class="text-2xl">📷</span> CCTV security
                   </p>
-                  <p class="flex items-center gap-2">
-                    <span>💧⚡</span> Free water & electricity
+                  <p class="flex items-center gap-3">
+                    <span class="text-2xl">🌐</span> Free WiFi
                   </p>
-                  <p class="flex items-center gap-2">
-                    <span>👤</span> 1 person per room
+                  <p class="flex items-center gap-3">
+                    <span class="text-2xl">💧⚡</span> Free water & electricity
+                  </p>
+                  <p class="flex items-center gap-3">
+                    <span class="text-2xl">👤</span> 1 person per room
                   </p>
                 </div>
 
                 <div
-                  class="bg-accent-orange text-white rounded-2xl p-6 text-center"
+                  class="bg-gradient-to-r from-accent-orange to-orange-500 text-white rounded-3xl p-8 text-center shadow-xl"
                 >
-                  <p class="text-2xl font-bold">💰 2,500 THB/month</p>
+                  <p class="text-3xl md:text-4xl font-bold">
+                    💰 2,500 THB/month
+                  </p>
                 </div>
 
-                <p class="text-sm text-gray-600">
+                <p class="text-base text-gray-600 leading-relaxed pt-2">
                   📅 Available from November 1st<br />
-                  🔍 Contact us for viewing and details<br />
                   📱 Call:
                   <a
                     href="tel:0931817616"
-                    class="text-accent-orange hover:underline font-medium"
+                    class="text-accent-orange hover:underline font-semibold"
                     >093-181-7616</a
                   >
                 </p>
               </div>
             </div>
 
-            <div class="relative">
+            <div
+              class="relative animate-on-scroll"
+              data-animation="fadeInRight"
+            >
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png"
+                src="./houseImage/houseImage.jpg"
                 alt="Room Image"
-                class="w-full rounded-2xl shadow-2xl"
+                class="w-full rounded-3xl shadow-2xl"
               />
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"
+                class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-3xl"
               ></div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Gallery Section -->
-      <section class="py-16 md:py-24 bg-gray-50">
+      <!-- Instagram-Style Gallery Section -->
+      <section class="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-4">
-          <div class="text-center mb-12">
+          <div
+            class="text-center mb-12 animate-on-scroll"
+            data-animation="fadeInUp"
+          >
             <h2
               id="gallery-title-th"
-              class="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+              class="text-3xl md:text-5xl font-bold text-gray-900 mb-4"
             >
               ภาพห้องพัก
             </h2>
             <h2
               id="gallery-title-en"
-              class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 hidden"
+              class="text-3xl md:text-5xl font-bold text-gray-900 mb-4 hidden"
             >
               Room Gallery
             </h2>
-            <p id="gallery-subtitle-th" class="text-gray-600">
-              ชมห้องพักของเรา
+            <p id="gallery-subtitle-th" class="text-lg text-gray-600">
+              มุมต่างๆ ภายในห้อง
             </p>
-            <p id="gallery-subtitle-en" class="text-gray-600 hidden">
-              Explore our available rooms
+            <p id="gallery-subtitle-en" class="text-lg text-gray-600 hidden">
+              Different views of the room
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Room Card 1 -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+          >
+            <!-- Room Overview -->
             <div
-              class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              class="instagram-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate-on-scroll"
+              data-animation="zoomIn"
             >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png"
-                alt="Room 1"
-                class="w-full h-64 object-cover"
-              />
-              <div class="p-6">
-                <h3 class="font-semibold text-xl mb-2 room-title-th">
-                  ห้องพักสตูดิโอ
-                </h3>
-                <h3 class="font-semibold text-xl mb-2 room-title-en hidden">
-                  Studio Room
-                </h3>
-                <p class="text-gray-600 text-sm room-desc-th">
-                  พื้นที่กว้างขวาง พร้อมเฟอร์นิเจอร์ครบ
+              <img src="./houseImage/houseImage-2.jpg" alt="Room Overview" />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+              >
+                <p class="text-white font-medium gallery-caption-th">
+                  ภาพรวมห้อง
                 </p>
-                <p class="text-gray-600 text-sm room-desc-en hidden">
-                  Spacious area with full furniture
+                <p class="text-white font-medium gallery-caption-en hidden">
+                  Room Overview
                 </p>
               </div>
             </div>
 
-            <!-- Room Card 2 -->
+            <!-- Bed -->
             <div
-              class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              class="instagram-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate-on-scroll"
+              data-animation="zoomIn"
+              data-delay="100"
             >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png"
-                alt="Room 2"
-                class="w-full h-64 object-cover"
-              />
-              <div class="p-6">
-                <h3 class="font-semibold text-xl mb-2 room-title-th">
-                  ห้องพักมาตรฐาน
-                </h3>
-                <h3 class="font-semibold text-xl mb-2 room-title-en hidden">
-                  Standard Room
-                </h3>
-                <p class="text-gray-600 text-sm room-desc-th">
-                  สะอาด สะดวกสบาย
+              <img src="./houseImage/houseImage-3.jpg" alt="Bed" />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+              >
+                <p class="text-white font-medium gallery-caption-th">
+                  🛏️ เตียงนอน
                 </p>
-                <p class="text-gray-600 text-sm room-desc-en hidden">
-                  Clean and comfortable
+                <p class="text-white font-medium gallery-caption-en hidden">
+                  🛏️ Bed
                 </p>
               </div>
             </div>
 
-            <!-- Room Card 3 -->
+            <!-- Toilet -->
             <div
-              class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              class="instagram-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate-on-scroll"
+              data-animation="zoomIn"
+              data-delay="200"
             >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png"
-                alt="Room 3"
-                class="w-full h-64 object-cover"
-              />
-              <div class="p-6">
-                <h3 class="font-semibold text-xl mb-2 room-title-th">
-                  ห้องพักสไตล์โมเดิร์น
-                </h3>
-                <h3 class="font-semibold text-xl mb-2 room-title-en hidden">
-                  Modern Style Room
-                </h3>
-                <p class="text-gray-600 text-sm room-desc-th">
-                  ดีไซน์ทันสมัย บรรยากาศดี
+              <img src="./houseImage/houseImage-7.jpg" alt="Toilet" />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+              >
+                <p class="text-white font-medium gallery-caption-th">
+                  🚿 ห้องน้ำ
                 </p>
-                <p class="text-gray-600 text-sm room-desc-en hidden">
-                  Modern design, great atmosphere
+                <p class="text-white font-medium gallery-caption-en hidden">
+                  🚿 Bathroom
+                </p>
+              </div>
+            </div>
+
+            <!-- Window View -->
+            <div
+              class="instagram-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate-on-scroll"
+              data-animation="zoomIn"
+              data-delay="300"
+            >
+              <img src="./houseImage/houseImage-9.jpg" alt="Window View" />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+              >
+                <p class="text-white font-medium gallery-caption-th">
+                  🪟 มุมหน้าต่าง
+                </p>
+                <p class="text-white font-medium gallery-caption-en hidden">
+                  🪟 Window View
+                </p>
+              </div>
+            </div>
+
+            <!-- Outdoor Area -->
+            <div
+              class="instagram-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate-on-scroll"
+              data-animation="zoomIn"
+              data-delay="400"
+            >
+              <img src="./houseImage/houseImage-2.jpg" alt="Outdoor" />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+              >
+                <p class="text-white font-medium gallery-caption-th">
+                  🌳 บริเวณนอกห้อง
+                </p>
+                <p class="text-white font-medium gallery-caption-en hidden">
+                  🌳 Outdoor Area
+                </p>
+              </div>
+            </div>
+
+            <!-- Building Exterior -->
+            <div
+              class="instagram-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate-on-scroll"
+              data-animation="zoomIn"
+              data-delay="500"
+            >
+              <img src="./houseImage/houseImage.jpg" alt="Building" />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+              >
+                <p class="text-white font-medium gallery-caption-th">
+                  🏢 อาคาร
+                </p>
+                <p class="text-white font-medium gallery-caption-en hidden">
+                  🏢 Building
                 </p>
               </div>
             </div>
@@ -448,65 +535,74 @@
       </section>
 
       <!-- Map + Contact Section -->
-      <section class="py-16 md:py-24 bg-white">
+      <section class="py-20 md:py-28 bg-white">
         <div class="container mx-auto px-4">
-          <div class="text-center mb-12">
+          <div
+            class="text-center mb-12 animate-on-scroll"
+            data-animation="fadeInUp"
+          >
             <h2
               id="contact-title-th"
-              class="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+              class="text-3xl md:text-5xl font-bold text-gray-900 mb-4"
             >
               ติดต่อเรา
             </h2>
             <h2
               id="contact-title-en"
-              class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 hidden"
+              class="text-3xl md:text-5xl font-bold text-gray-900 mb-4 hidden"
             >
               Contact Us
             </h2>
-            <p id="contact-subtitle-th" class="text-gray-600">
+            <p id="contact-subtitle-th" class="text-lg text-gray-600">
               เราพร้อมให้บริการคุณ
             </p>
-            <p id="contact-subtitle-en" class="text-gray-600 hidden">
+            <p id="contact-subtitle-en" class="text-lg text-gray-600 hidden">
               We're here to help you
             </p>
           </div>
 
-          <div class="grid md:grid-cols-2 gap-8">
+          <div class="grid md:grid-cols-2 gap-10">
             <!-- Contact Info + Form -->
-            <div class="space-y-6">
+            <div
+              class="space-y-6 animate-on-scroll"
+              data-animation="fadeInLeft"
+            >
               <!-- Contact Cards -->
-              <div class="bg-accent-light rounded-2xl p-6 shadow-lg">
-                <div class="flex items-start gap-4 mb-4">
-                  <span class="text-3xl">📍</span>
+              <div
+                class="bg-gradient-to-br from-accent-light to-orange-100 rounded-3xl p-8 shadow-xl"
+              >
+                <div class="flex items-start gap-4 mb-6">
+                  <span class="text-4xl">📍</span>
                   <div>
-                    <h3 class="font-semibold text-lg mb-2 contact-label-th">
+                    <h3 class="font-semibold text-xl mb-3 contact-label-th">
                       ที่อยู่
                     </h3>
                     <h3
-                      class="font-semibold text-lg mb-2 contact-label-en hidden"
+                      class="font-semibold text-xl mb-3 contact-label-en hidden"
                     >
                       Address
                     </h3>
-                    <p class="text-gray-700">
+                    <p class="text-gray-800 leading-relaxed">
                       732 บ้านทุ่งกองมู หมู่ 3<br />ตำบลปางหมู แม่ฮ่องสอน
+                      ประเทศไทย
                     </p>
                   </div>
                 </div>
 
                 <div class="flex items-start gap-4">
-                  <span class="text-3xl">📱</span>
+                  <span class="text-4xl">📱</span>
                   <div>
-                    <h3 class="font-semibold text-lg mb-2 contact-label-th">
+                    <h3 class="font-semibold text-xl mb-3 contact-label-th">
                       โทรศัพท์
                     </h3>
                     <h3
-                      class="font-semibold text-lg mb-2 contact-label-en hidden"
+                      class="font-semibold text-xl mb-3 contact-label-en hidden"
                     >
                       Phone
                     </h3>
                     <a
                       href="tel:0931817616"
-                      class="text-accent-orange hover:underline text-lg font-medium"
+                      class="text-accent-orange hover:underline text-2xl font-bold"
                       >093-181-7616</a
                     >
                   </div>
@@ -515,56 +611,57 @@
 
               <!-- Contact Form -->
               <div
-                class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-lg"
+                class="bg-white border-2 border-gray-200 rounded-3xl p-8 shadow-xl animate-on-scroll"
+                data-animation="fadeInUp"
               >
-                <h3 class="font-semibold text-xl mb-4 form-title-th">
+                <h3 class="font-bold text-2xl mb-6 form-title-th">
                   ส่งข้อความถึงเรา
                 </h3>
-                <h3 class="font-semibold text-xl mb-4 form-title-en hidden">
+                <h3 class="font-bold text-2xl mb-6 form-title-en hidden">
                   Send us a message
                 </h3>
-                <form class="space-y-4">
+                <form class="space-y-5">
                   <div>
                     <label
-                      class="block text-sm font-medium text-gray-700 mb-2 form-label-th"
+                      class="block text-sm font-semibold text-gray-700 mb-2 form-label-th"
                       >ชื่อของคุณ</label
                     >
                     <label
-                      class="block text-sm font-medium text-gray-700 mb-2 form-label-en hidden"
+                      class="block text-sm font-semibold text-gray-700 mb-2 form-label-en hidden"
                       >Your Name</label
                     >
                     <input
                       type="text"
-                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-transparent"
+                      class="w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-accent-orange focus:border-transparent transition-all"
                       placeholder="ชื่อ"
                     />
                   </div>
                   <div>
                     <label
-                      class="block text-sm font-medium text-gray-700 mb-2 form-label-th"
+                      class="block text-sm font-semibold text-gray-700 mb-2 form-label-th"
                       >ข้อความ</label
                     >
                     <label
-                      class="block text-sm font-medium text-gray-700 mb-2 form-label-en hidden"
+                      class="block text-sm font-semibold text-gray-700 mb-2 form-label-en hidden"
                       >Message</label
                     >
                     <textarea
                       rows="4"
-                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-orange focus:border-transparent"
+                      class="w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-accent-orange focus:border-transparent transition-all"
                       placeholder="พิมพ์ข้อความที่นี่..."
                     ></textarea>
                   </div>
                   <button
                     type="submit"
-                    class="w-full bg-accent-orange text-white py-3 rounded-lg font-medium hover:bg-orange-600 transition-all duration-300 form-button-th"
+                    class="w-full bg-gradient-to-r from-accent-orange to-orange-500 text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 form-button-th"
                   >
-                    ส่งข้อความ
+                    ส่งข้อความ ✉️
                   </button>
                   <button
                     type="submit"
-                    class="w-full bg-accent-orange text-white py-3 rounded-lg font-medium hover:bg-orange-600 transition-all duration-300 form-button-en hidden"
+                    class="w-full bg-gradient-to-r from-accent-orange to-orange-500 text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 form-button-en hidden"
                   >
-                    Send Message
+                    Send Message ✉️
                   </button>
                 </form>
               </div>
@@ -572,7 +669,8 @@
 
             <!-- Map -->
             <div
-              class="bg-white rounded-2xl overflow-hidden shadow-lg h-[500px]"
+              class="bg-white rounded-3xl overflow-hidden shadow-2xl h-[600px] animate-on-scroll"
+              data-animation="fadeInRight"
             >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3765.0394353781603!2d97.958019!3d19.324095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDE5JzI2LjciTiA5N8KwNTcnMjguOSJF!5e0!3m2!1sen!2sth!4v1761913323578!5m2!1sen!2sth"
@@ -590,18 +688,21 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer
+      class="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 animate-on-scroll"
+      data-animation="fadeIn"
+    >
       <div class="container mx-auto px-4">
-        <div class="text-center space-y-6">
-          <h3 class="text-2xl font-semibold">ห้องพัก นาน นาน</h3>
+        <div class="text-center space-y-8">
+          <h3 class="text-3xl md:text-4xl font-bold">ห้องพัก นาน นาน</h3>
 
           <!-- Social Icons -->
           <div class="flex justify-center gap-6">
             <a
               href="#"
-              class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-all duration-300"
+              class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg"
             >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
                 />
@@ -609,9 +710,9 @@
             </a>
             <a
               href="#"
-              class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition-all duration-300"
+              class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg"
             >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"
                 />
@@ -619,9 +720,9 @@
             </a>
             <a
               href="#"
-              class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+              class="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg"
             >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
                 />
@@ -630,11 +731,11 @@
           </div>
 
           <!-- Copyright -->
-          <div class="border-t border-gray-700 pt-6">
-            <p id="footer-text-th" class="text-sm text-gray-400">
+          <div class="border-t border-gray-700 pt-8">
+            <p id="footer-text-th" class="text-base text-gray-400">
               © 2025 ห้องพักนาน นาน | ออกแบบด้วย ❤️ ในไทย
             </p>
-            <p id="footer-text-en" class="text-sm text-gray-400 hidden">
+            <p id="footer-text-en" class="text-base text-gray-400 hidden">
               © 2025 Naan Naan Room Rental | Made with ❤️ in Thailand
             </p>
           </div>
@@ -642,9 +743,9 @@
       </div>
     </footer>
 
-    <!-- Three.js Animation Script -->
+    <!-- Three.js Hero Animation Script -->
     <script>
-      // Three.js Hero Background Animation
+      // Three.js Modern Wave Animation
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(
         75,
@@ -659,28 +760,38 @@
       });
 
       renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       camera.position.z = 5;
 
-      // Create particles
+      // Create floating particles with varying sizes
       const particlesGeometry = new THREE.BufferGeometry();
-      const particlesCount = 100;
+      const particlesCount = 200;
       const posArray = new Float32Array(particlesCount * 3);
+      const sizeArray = new Float32Array(particlesCount);
 
-      for (let i = 0; i < particlesCount * 3; i++) {
-        posArray[i] = (Math.random() - 0.5) * 10;
+      for (let i = 0; i < particlesCount * 3; i += 3) {
+        posArray[i] = (Math.random() - 0.5) * 15;
+        posArray[i + 1] = (Math.random() - 0.5) * 15;
+        posArray[i + 2] = (Math.random() - 0.5) * 10;
+        sizeArray[i / 3] = Math.random() * 0.15 + 0.05;
       }
 
       particlesGeometry.setAttribute(
         "position",
         new THREE.BufferAttribute(posArray, 3)
       );
+      particlesGeometry.setAttribute(
+        "size",
+        new THREE.BufferAttribute(sizeArray, 1)
+      );
 
       const particlesMaterial = new THREE.PointsMaterial({
-        size: 0.05,
+        size: 0.1,
         color: "#FF8C42",
         transparent: true,
-        opacity: 0.8,
+        opacity: 0.6,
+        sizeAttenuation: true,
+        blending: THREE.AdditiveBlending,
       });
 
       const particlesMesh = new THREE.Points(
@@ -689,21 +800,136 @@
       );
       scene.add(particlesMesh);
 
-      // Animation loop
+      // Create modern flowing wave (higher resolution)
+      const waveGeometry = new THREE.PlaneGeometry(20, 20, 64, 64);
+      const waveMaterial = new THREE.MeshBasicMaterial({
+        color: "#FFF5EB",
+        wireframe: true,
+        transparent: true,
+        opacity: 0.15,
+      });
+      const waveMesh = new THREE.Mesh(waveGeometry, waveMaterial);
+      waveMesh.rotation.x = -Math.PI / 2.2;
+      waveMesh.position.y = -3;
+      scene.add(waveMesh);
+
+      // Create secondary wave layer for depth
+      const wave2Geometry = new THREE.PlaneGeometry(18, 18, 48, 48);
+      const wave2Material = new THREE.MeshBasicMaterial({
+        color: "#FF8C42",
+        wireframe: true,
+        transparent: true,
+        opacity: 0.08,
+      });
+      const wave2Mesh = new THREE.Mesh(wave2Geometry, wave2Material);
+      wave2Mesh.rotation.x = -Math.PI / 2.5;
+      wave2Mesh.position.y = -2.5;
+      scene.add(wave2Mesh);
+
+      // Create gradient sphere particles for modern look
+      const sphereCount = 15;
+      const spheres = [];
+      for (let i = 0; i < sphereCount; i++) {
+        const sphereGeometry = new THREE.SphereGeometry(0.15, 16, 16);
+        const sphereMaterial = new THREE.MeshBasicMaterial({
+          color: i % 2 === 0 ? "#FF8C42" : "#FFF5EB",
+          transparent: true,
+          opacity: 0.3,
+        });
+        const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        sphere.position.set(
+          (Math.random() - 0.5) * 10,
+          (Math.random() - 0.5) * 10,
+          (Math.random() - 0.5) * 5
+        );
+        sphere.userData = {
+          speedX: (Math.random() - 0.5) * 0.02,
+          speedY: (Math.random() - 0.5) * 0.02,
+          speedZ: (Math.random() - 0.5) * 0.01,
+        };
+        spheres.push(sphere);
+        scene.add(sphere);
+      }
+
+      // Animation variables
       let mouseX = 0;
       let mouseY = 0;
+      let targetMouseX = 0;
+      let targetMouseY = 0;
+      let time = 0;
 
       document.addEventListener("mousemove", (event) => {
-        mouseX = event.clientX / window.innerWidth - 0.5;
-        mouseY = event.clientY / window.innerHeight - 0.5;
+        targetMouseX = (event.clientX / window.innerWidth) * 2 - 1;
+        targetMouseY = -(event.clientY / window.innerHeight) * 2 + 1;
       });
 
       function animate() {
         requestAnimationFrame(animate);
+        time += 0.008;
 
-        particlesMesh.rotation.y += 0.001;
+        // Smooth mouse following
+        mouseX += (targetMouseX - mouseX) * 0.05;
+        mouseY += (targetMouseY - mouseY) * 0.05;
+
+        // Rotate particles with mouse interaction
+        particlesMesh.rotation.y = time * 0.2;
         particlesMesh.rotation.x = mouseY * 0.3;
-        particlesMesh.rotation.y = mouseX * 0.3;
+        particlesMesh.rotation.y += mouseX * 0.2;
+
+        // Animate primary wave with modern ripple effect
+        const positions = waveMesh.geometry.attributes.position.array;
+        for (let i = 0; i < positions.length; i += 3) {
+          const x = positions[i];
+          const y = positions[i + 1];
+          const distance = Math.sqrt(x * x + y * y);
+
+          // Create flowing wave pattern
+          positions[i + 2] =
+            Math.sin(distance * 0.2 - time * 2) * 0.8 +
+            Math.sin(x * 0.2 + time) * Math.cos(y * 0.2 + time) * 0.6 +
+            Math.sin(time * 1.5 + distance * 0.1) * 0.4;
+        }
+        waveMesh.geometry.attributes.position.needsUpdate = true;
+        waveMesh.rotation.z = Math.sin(time * 0.3) * 0.1;
+
+        // Animate secondary wave (different pattern)
+        const positions2 = wave2Mesh.geometry.attributes.position.array;
+        for (let i = 0; i < positions2.length; i += 3) {
+          const x = positions2[i];
+          const y = positions2[i + 1];
+          const distance = Math.sqrt(x * x + y * y);
+
+          positions2[i + 2] =
+            Math.cos(distance * 0.15 - time * 1.5) * 0.9 +
+            Math.sin(x * 0.15 - time) * Math.cos(y * 0.15 - time) * 0.5;
+        }
+        wave2Mesh.geometry.attributes.position.needsUpdate = true;
+        wave2Mesh.rotation.z = -Math.sin(time * 0.2) * 0.15;
+
+        // Animate floating spheres
+        spheres.forEach((sphere, index) => {
+          sphere.position.x += sphere.userData.speedX;
+          sphere.position.y += sphere.userData.speedY;
+          sphere.position.z += sphere.userData.speedZ;
+
+          // Bounce back if out of bounds
+          if (Math.abs(sphere.position.x) > 8) sphere.userData.speedX *= -1;
+          if (Math.abs(sphere.position.y) > 8) sphere.userData.speedY *= -1;
+          if (Math.abs(sphere.position.z) > 4) sphere.userData.speedZ *= -1;
+
+          // Gentle floating motion
+          sphere.position.y += Math.sin(time + index) * 0.01;
+          sphere.rotation.x += 0.01;
+          sphere.rotation.y += 0.01;
+
+          // Pulsing opacity
+          sphere.material.opacity = 0.2 + Math.sin(time * 2 + index) * 0.15;
+        });
+
+        // Gentle camera movement
+        camera.position.x = mouseX * 0.5;
+        camera.position.y = mouseY * 0.5;
+        camera.lookAt(scene.position);
 
         renderer.render(scene, camera);
       }
@@ -715,6 +941,41 @@
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      });
+    </script>
+
+    <!-- Scroll Animation Script (Animate.js functionality) -->
+    <script>
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const animation = entry.target.dataset.animation;
+            const delay = entry.target.dataset.delay || 0;
+
+            setTimeout(() => {
+              entry.target.classList.add(
+                "animate__animated",
+                `animate__${animation}`
+              );
+            }, delay);
+
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe all elements with animate-on-scroll class
+      document.addEventListener("DOMContentLoaded", () => {
+        const animatedElements =
+          document.querySelectorAll(".animate-on-scroll");
+        animatedElements.forEach((el) => observer.observe(el));
       });
     </script>
 
@@ -726,31 +987,58 @@
       langToggle.addEventListener("click", () => {
         currentLang = currentLang === "th" ? "en" : "th";
 
-        // Update button text
+        // Update button text with animation
+        langToggle.classList.add("animate__animated", "animate__pulse");
         langToggle.textContent =
           currentLang === "th" ? "🌐 English" : "🌐 ภาษาไทย";
+        setTimeout(() => {
+          langToggle.classList.remove("animate__animated", "animate__pulse");
+        }, 1000);
 
-        // Toggle all content
+        // Toggle all content with smooth transition
         const thElements = document.querySelectorAll(
-          '[id$="-th"], .room-title-th, .room-desc-th, .contact-label-th, .form-title-th, .form-label-th, .form-button-th'
+          '[id$="-th"], .gallery-caption-th, .contact-label-th, .form-title-th, .form-label-th, .form-button-th'
         );
         const enElements = document.querySelectorAll(
-          '[id$="-en"], .room-title-en, .room-desc-en, .contact-label-en, .form-title-en, .form-label-en, .form-button-en'
+          '[id$="-en"], .gallery-caption-en, .contact-label-en, .form-title-en, .form-label-en, .form-button-en'
         );
 
-        thElements.forEach((el) => el.classList.toggle("hidden"));
-        enElements.forEach((el) => el.classList.toggle("hidden"));
+        thElements.forEach((el) => {
+          if (el.classList.contains("hidden")) {
+            el.classList.remove("hidden");
+            el.classList.add("animate__animated", "animate__fadeIn");
+          } else {
+            el.classList.add("hidden");
+          }
+        });
+
+        enElements.forEach((el) => {
+          if (el.classList.contains("hidden")) {
+            el.classList.remove("hidden");
+            el.classList.add("animate__animated", "animate__fadeIn");
+          } else {
+            el.classList.add("hidden");
+          }
+        });
       });
 
-      // Smooth scroll
+      // Smooth scroll for anchor links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
           const target = document.querySelector(this.getAttribute("href"));
           if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
           }
         });
+      });
+
+      // Add entrance animations to page load
+      window.addEventListener("load", () => {
+        document.body.classList.add("animate__animated", "animate__fadeIn");
       });
     </script>
   </body>
