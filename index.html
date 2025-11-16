@@ -191,78 +191,51 @@
     <!-- Main Content -->
     <main>
       <!-- About/Details Section -->
-      <section id="details" class="py-20 md:py-28 bg-white">
-        <div class="container mx-auto px-4">
+      <section id="details" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
           <!-- Thai Content -->
           <div
             id="details-th"
-            class="grid md:grid-cols-2 gap-10 md:gap-16 items-center"
+            class="grid md:grid-cols-2 gap-8 md:gap-12 items-center"
           >
-            <div
-              class="space-y-6 animate-on-scroll"
-              data-animation="slideInLeft"
-            >
-              <h2 class="text-3xl md:text-5xl font-bold text-gray-900">
+            <div class="space-y-5">
+              <h2 class="text-2xl md:text-4xl font-semibold text-gray-900">
                 รายละเอียดห้องพัก
               </h2>
 
-              <div class="space-y-4 text-gray-700 leading-relaxed">
-                <p class="flex items-start gap-3 text-lg">
-                  <span class="text-3xl">📌</span>
-                  <span
-                    >ห้องพัก นาน นาน อยู่ที่ 732 บ้านทุ่งกองมู หมู่ 3 ระหว่างซอย
-                    2 และ ซอย 3 ถนนกุงลมพัฒนา ตำบล ปางหมู</span
-                  >
+              <div class="space-y-4 text-gray-700 text-sm md:text-base">
+                <p class="leading-relaxed">
+                  ห้องพัก นาน นาน อยู่ที่ 732 บ้านทุ่งกองมู หมู่ 3 ระหว่างซอย 2
+                  และ ซอย 3 ถนนกุงลมพัฒนา ตำบลปางหมู
                 </p>
 
-                <p class="flex items-start gap-3">
-                  <span class="text-3xl">🗺️</span>
-                  <a
-                    href="https://maps.app.goo.gl/gTUSwrkpVAmQEoG36"
-                    target="_blank"
-                    class="text-accent-orange hover:underline font-medium"
-                  >
-                    ดูพิกัดบน Google Maps
-                  </a>
-                </p>
+                <a
+                  href="https://maps.app.goo.gl/gTUSwrkpVAmQEoG36"
+                  target="_blank"
+                  class="inline-block text-accent-orange hover:underline font-medium"
+                >
+                  ดูพิกัดบน Google Maps →
+                </a>
 
                 <div
-                  class="bg-accent-light rounded-3xl p-8 space-y-3 shadow-lg"
+                  class="border-l-4 border-accent-orange pl-4 py-2 space-y-2 bg-gray-50 rounded-r"
                 >
-                  <p class="flex items-center gap-3 text-lg">
-                    <span class="text-2xl">🏠</span> ห้องพักมี 10 ห้อง
-                    (ว่างให้เช่าทุกห้อง)
-                  </p>
-                  <p class="flex items-center gap-3 text-lg">
-                    <span class="text-2xl">📏</span> ห้องทั้งหมดมีขนาดเดียวกัน
-                  </p>
-                  <p class="flex items-center gap-3">
-                    <span class="text-2xl">🔹</span> มีพัดลม เครื่องทำน้ำอุ่น
-                    เตียงพร้อมที่นอน
-                  </p>
-                  <p class="flex items-center gap-3">
-                    <span class="text-2xl">📷</span> มีกล้องวงจรปิด
-                  </p>
-                  <p class="flex items-center gap-3">
-                    <span class="text-2xl">🌐</span> มี Wifi ฟรี
-                  </p>
-                  <p class="flex items-center gap-3">
-                    <span class="text-2xl">💧⚡</span> น้ำไฟฟรี
-                  </p>
-                  <p class="flex items-center gap-3">
-                    <span class="text-2xl">👤</span> สำหรับ 1 คนต่อ 1 ห้อง
-                  </p>
+                  <p>🏠 ห้องพักมี 10 ห้อง (ว่างให้เช่าทุกห้อง)</p>
+                  <p>📏 ห้องทั้งหมดมีขนาดเดียวกัน</p>
+                  <p>🔹 มีพัดลม เครื่องทำน้ำอุ่น เตียงพร้อมที่นอน</p>
+                  <p>📷 มีกล้องวงจรปิด</p>
+                  <p>🌐 มี Wifi ฟรี</p>
+                  <p>💧⚡ น้ำไฟฟรี</p>
+                  <p>👤 สำหรับ 1 คนต่อ 1 ห้อง</p>
                 </div>
 
                 <div
-                  class="bg-gradient-to-r from-accent-orange to-orange-500 text-white rounded-3xl p-8 text-center shadow-xl"
+                  class="bg-accent-orange text-white rounded-2xl p-6 text-center"
                 >
-                  <p class="text-3xl md:text-4xl font-bold">
-                    💰 2,500 บาท/เดือน
-                  </p>
+                  <p class="text-2xl md:text-3xl font-bold">2,500 บาท/เดือน</p>
                 </div>
 
-                <p class="text-base text-gray-600 leading-relaxed pt-2">
+                <p class="text-sm text-gray-600 pt-2">
                   📅 สามารถเข้ามาอยู่ได้ ตอนสิ้นเดือนนี้ (วันที่ 1 พฤศจิกายน)<br />
                   📱 โทร.
                   <a
@@ -274,92 +247,58 @@
               </div>
             </div>
 
-            <div
-              class="relative animate-on-scroll"
-              data-animation="fadeInRight"
-            >
+            <div class="relative">
               <img
                 src="./houseImage/houseImage.jpg"
                 alt="Room Image"
-                class="w-full rounded-3xl shadow-2xl"
+                class="w-full rounded-2xl shadow-lg"
               />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-3xl"
-              ></div>
             </div>
           </div>
 
           <!-- English Content -->
           <div
             id="details-en"
-            class="grid md:grid-cols-2 gap-10 md:gap-16 items-center hidden"
+            class="grid md:grid-cols-2 gap-8 md:gap-12 items-center hidden"
           >
-            <div
-              class="space-y-6 animate-on-scroll"
-              data-animation="slideInLeft"
-            >
-              <h2 class="text-3xl md:text-5xl font-bold text-gray-900">
+            <div class="space-y-5">
+              <h2 class="text-2xl md:text-4xl font-semibold text-gray-900">
                 Room Details
               </h2>
 
-              <div class="space-y-4 text-gray-700 leading-relaxed">
-                <p class="flex items-start gap-3 text-lg">
-                  <span class="text-3xl">📌</span>
-                  <span
-                    >Naan Naan Room located at 732 Ban Thung Kong Moo, Moo 3,
-                    between Soi 2 and Soi 3, Kunglomp Pattana Road, Pang
-                    Mu</span
-                  >
+              <div class="space-y-4 text-gray-700 text-sm md:text-base">
+                <p class="leading-relaxed">
+                  Naan Naan Room located at 732 Ban Thung Kong Moo, Moo 3,
+                  between Soi 2 and Soi 3, Kunglomp Pattana Road, Pang Mu
                 </p>
 
-                <p class="flex items-start gap-3">
-                  <span class="text-3xl">🗺️</span>
-                  <a
-                    href="https://maps.app.goo.gl/gTUSwrkpVAmQEoG36"
-                    target="_blank"
-                    class="text-accent-orange hover:underline font-medium"
-                  >
-                    View on Google Maps
-                  </a>
-                </p>
+                <a
+                  href="https://maps.app.goo.gl/gTUSwrkpVAmQEoG36"
+                  target="_blank"
+                  class="inline-block text-accent-orange hover:underline font-medium"
+                >
+                  View on Google Maps →
+                </a>
 
                 <div
-                  class="bg-accent-light rounded-3xl p-8 space-y-3 shadow-lg"
+                  class="border-l-4 border-accent-orange pl-4 py-2 space-y-2 bg-gray-50 rounded-r"
                 >
-                  <p class="flex items-center gap-3 text-lg">
-                    <span class="text-2xl">🏠</span> 10 rooms available (all
-                    vacant)
-                  </p>
-                  <p class="flex items-center gap-3 text-lg">
-                    <span class="text-2xl">📏</span> All rooms are the same size
-                  </p>
-                  <p class="flex items-center gap-3">
-                    <span class="text-2xl">🔹</span> Fan, water heater, bed with
-                    mattress
-                  </p>
-                  <p class="flex items-center gap-3">
-                    <span class="text-2xl">📷</span> CCTV security
-                  </p>
-                  <p class="flex items-center gap-3">
-                    <span class="text-2xl">🌐</span> Free WiFi
-                  </p>
-                  <p class="flex items-center gap-3">
-                    <span class="text-2xl">💧⚡</span> Free water & electricity
-                  </p>
-                  <p class="flex items-center gap-3">
-                    <span class="text-2xl">👤</span> 1 person per room
-                  </p>
+                  <p>🏠 10 rooms available (all vacant)</p>
+                  <p>📏 All rooms are the same size</p>
+                  <p>🔹 Fan, water heater, bed with mattress</p>
+                  <p>📷 CCTV security</p>
+                  <p>🌐 Free WiFi</p>
+                  <p>💧⚡ Free water & electricity</p>
+                  <p>👤 1 person per room</p>
                 </div>
 
                 <div
-                  class="bg-gradient-to-r from-accent-orange to-orange-500 text-white rounded-3xl p-8 text-center shadow-xl"
+                  class="bg-accent-orange text-white rounded-2xl p-6 text-center"
                 >
-                  <p class="text-3xl md:text-4xl font-bold">
-                    💰 2,500 THB/month
-                  </p>
+                  <p class="text-2xl md:text-3xl font-bold">2,500 THB/month</p>
                 </div>
 
-                <p class="text-base text-gray-600 leading-relaxed pt-2">
+                <p class="text-sm text-gray-600 pt-2">
                   📅 Available from November 1st<br />
                   📱 Call:
                   <a
@@ -371,306 +310,154 @@
               </div>
             </div>
 
-            <div
-              class="relative animate-on-scroll"
-              data-animation="fadeInRight"
-            >
+            <div class="relative">
               <img
                 src="./houseImage/houseImage.jpg"
                 alt="Room Image"
-                class="w-full rounded-3xl shadow-2xl"
+                class="w-full rounded-2xl shadow-lg"
               />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-3xl"
-              ></div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Instagram-Style Gallery Section -->
-      <section class="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white">
-        <div class="container mx-auto px-4">
-          <div
-            class="text-center mb-12 animate-on-scroll"
-            data-animation="fadeInUp"
-          >
+      <!-- Gallery Section -->
+      <section class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+          <div class="text-center mb-10">
             <h2
               id="gallery-title-th"
-              class="text-3xl md:text-5xl font-bold text-gray-900 mb-4"
+              class="text-2xl md:text-4xl font-semibold text-gray-900 mb-2"
             >
               ภาพห้องพัก
             </h2>
             <h2
               id="gallery-title-en"
-              class="text-3xl md:text-5xl font-bold text-gray-900 mb-4 hidden"
+              class="text-2xl md:text-4xl font-semibold text-gray-900 mb-2 hidden"
             >
               Room Gallery
             </h2>
-            <p id="gallery-subtitle-th" class="text-lg text-gray-600">
+            <p id="gallery-subtitle-th" class="text-sm text-gray-600">
               มุมต่างๆ ภายในห้อง
             </p>
-            <p id="gallery-subtitle-en" class="text-lg text-gray-600 hidden">
+            <p id="gallery-subtitle-en" class="text-sm text-gray-600 hidden">
               Different views of the room
             </p>
           </div>
 
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
-          >
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             <!-- Room Overview -->
             <div
-              class="instagram-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate-on-scroll"
-              data-animation="zoomIn"
+              class="instagram-card bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition-shadow duration-300"
             >
               <img src="./houseImage/houseImage-2.jpg" alt="Room Overview" />
-              <div
-                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
-              >
-                <p class="text-white font-medium gallery-caption-th">
-                  ภาพรวมห้อง
-                </p>
-                <p class="text-white font-medium gallery-caption-en hidden">
-                  Room Overview
-                </p>
-              </div>
             </div>
 
             <!-- Bed -->
             <div
-              class="instagram-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate-on-scroll"
-              data-animation="zoomIn"
-              data-delay="100"
+              class="instagram-card bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition-shadow duration-300"
             >
               <img src="./houseImage/houseImage-3.jpg" alt="Bed" />
-              <div
-                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
-              >
-                <p class="text-white font-medium gallery-caption-th">
-                  🛏️ เตียงนอน
-                </p>
-                <p class="text-white font-medium gallery-caption-en hidden">
-                  🛏️ Bed
-                </p>
-              </div>
             </div>
 
             <!-- Toilet -->
             <div
-              class="instagram-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate-on-scroll"
-              data-animation="zoomIn"
-              data-delay="200"
+              class="instagram-card bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition-shadow duration-300"
             >
               <img src="./houseImage/houseImage-7.jpg" alt="Toilet" />
-              <div
-                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
-              >
-                <p class="text-white font-medium gallery-caption-th">
-                  🚿 ห้องน้ำ
-                </p>
-                <p class="text-white font-medium gallery-caption-en hidden">
-                  🚿 Bathroom
-                </p>
-              </div>
             </div>
 
             <!-- Window View -->
             <div
-              class="instagram-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate-on-scroll"
-              data-animation="zoomIn"
-              data-delay="300"
+              class="instagram-card bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition-shadow duration-300"
             >
               <img src="./houseImage/houseImage-9.jpg" alt="Window View" />
-              <div
-                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
-              >
-                <p class="text-white font-medium gallery-caption-th">
-                  🪟 มุมหน้าต่าง
-                </p>
-                <p class="text-white font-medium gallery-caption-en hidden">
-                  🪟 Window View
-                </p>
-              </div>
             </div>
 
             <!-- Outdoor Area -->
             <div
-              class="instagram-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate-on-scroll"
-              data-animation="zoomIn"
-              data-delay="400"
+              class="instagram-card bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition-shadow duration-300"
             >
               <img src="./houseImage/houseImage-2.jpg" alt="Outdoor" />
-              <div
-                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
-              >
-                <p class="text-white font-medium gallery-caption-th">
-                  🌳 บริเวณนอกห้อง
-                </p>
-                <p class="text-white font-medium gallery-caption-en hidden">
-                  🌳 Outdoor Area
-                </p>
-              </div>
             </div>
 
             <!-- Building Exterior -->
             <div
-              class="instagram-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate-on-scroll"
-              data-animation="zoomIn"
-              data-delay="500"
+              class="instagram-card bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition-shadow duration-300"
             >
               <img src="./houseImage/houseImage.jpg" alt="Building" />
-              <div
-                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
-              >
-                <p class="text-white font-medium gallery-caption-th">
-                  🏢 อาคาร
-                </p>
-                <p class="text-white font-medium gallery-caption-en hidden">
-                  🏢 Building
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Map + Contact Section -->
-      <section class="py-20 md:py-28 bg-white">
-        <div class="container mx-auto px-4">
-          <div
-            class="text-center mb-12 animate-on-scroll"
-            data-animation="fadeInUp"
-          >
+      <!-- Contact Section -->
+      <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+          <div class="text-center mb-10">
             <h2
               id="contact-title-th"
-              class="text-3xl md:text-5xl font-bold text-gray-900 mb-4"
+              class="text-2xl md:text-4xl font-semibold text-gray-900 mb-2"
             >
               ติดต่อเรา
             </h2>
             <h2
               id="contact-title-en"
-              class="text-3xl md:text-5xl font-bold text-gray-900 mb-4 hidden"
+              class="text-2xl md:text-4xl font-semibold text-gray-900 mb-2 hidden"
             >
               Contact Us
             </h2>
-            <p id="contact-subtitle-th" class="text-lg text-gray-600">
+            <p id="contact-subtitle-th" class="text-sm text-gray-600">
               เราพร้อมให้บริการคุณ
             </p>
-            <p id="contact-subtitle-en" class="text-lg text-gray-600 hidden">
+            <p id="contact-subtitle-en" class="text-sm text-gray-600 hidden">
               We're here to help you
             </p>
           </div>
 
-          <div class="grid md:grid-cols-2 gap-10">
-            <!-- Contact Info + Form -->
-            <div
-              class="space-y-6 animate-on-scroll"
-              data-animation="fadeInLeft"
-            >
-              <!-- Contact Cards -->
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Contact Info -->
+            <div class="space-y-6">
               <div
-                class="bg-gradient-to-br from-accent-light to-orange-100 rounded-3xl p-8 shadow-xl"
+                class="bg-accent-light border border-orange-200 rounded-2xl p-6"
               >
-                <div class="flex items-start gap-4 mb-6">
-                  <span class="text-4xl">📍</span>
+                <div class="space-y-4">
                   <div>
-                    <h3 class="font-semibold text-xl mb-3 contact-label-th">
+                    <h3 class="font-semibold text-lg mb-2 contact-label-th">
                       ที่อยู่
                     </h3>
                     <h3
-                      class="font-semibold text-xl mb-3 contact-label-en hidden"
+                      class="font-semibold text-lg mb-2 contact-label-en hidden"
                     >
                       Address
                     </h3>
-                    <p class="text-gray-800 leading-relaxed">
+                    <p class="text-gray-700 text-sm">
                       732 บ้านทุ่งกองมู หมู่ 3<br />ตำบลปางหมู แม่ฮ่องสอน
-                      ประเทศไทย
                     </p>
                   </div>
-                </div>
 
-                <div class="flex items-start gap-4">
-                  <span class="text-4xl">📱</span>
-                  <div>
-                    <h3 class="font-semibold text-xl mb-3 contact-label-th">
+                  <div class="pt-4 border-t border-orange-200">
+                    <h3 class="font-semibold text-lg mb-2 contact-label-th">
                       โทรศัพท์
                     </h3>
                     <h3
-                      class="font-semibold text-xl mb-3 contact-label-en hidden"
+                      class="font-semibold text-lg mb-2 contact-label-en hidden"
                     >
                       Phone
                     </h3>
                     <a
                       href="tel:0931817616"
-                      class="text-accent-orange hover:underline text-2xl font-bold"
+                      class="text-accent-orange hover:underline text-xl font-bold"
                       >093-181-7616</a
                     >
                   </div>
                 </div>
               </div>
-
-              <!-- Contact Form -->
-              <div
-                class="bg-white border-2 border-gray-200 rounded-3xl p-8 shadow-xl animate-on-scroll"
-                data-animation="fadeInUp"
-              >
-                <h3 class="font-bold text-2xl mb-6 form-title-th">
-                  ส่งข้อความถึงเรา
-                </h3>
-                <h3 class="font-bold text-2xl mb-6 form-title-en hidden">
-                  Send us a message
-                </h3>
-                <form class="space-y-5">
-                  <div>
-                    <label
-                      class="block text-sm font-semibold text-gray-700 mb-2 form-label-th"
-                      >ชื่อของคุณ</label
-                    >
-                    <label
-                      class="block text-sm font-semibold text-gray-700 mb-2 form-label-en hidden"
-                      >Your Name</label
-                    >
-                    <input
-                      type="text"
-                      class="w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-accent-orange focus:border-transparent transition-all"
-                      placeholder="ชื่อ"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      class="block text-sm font-semibold text-gray-700 mb-2 form-label-th"
-                      >ข้อความ</label
-                    >
-                    <label
-                      class="block text-sm font-semibold text-gray-700 mb-2 form-label-en hidden"
-                      >Message</label
-                    >
-                    <textarea
-                      rows="4"
-                      class="w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-accent-orange focus:border-transparent transition-all"
-                      placeholder="พิมพ์ข้อความที่นี่..."
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    class="w-full bg-gradient-to-r from-accent-orange to-orange-500 text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 form-button-th"
-                  >
-                    ส่งข้อความ ✉️
-                  </button>
-                  <button
-                    type="submit"
-                    class="w-full bg-gradient-to-r from-accent-orange to-orange-500 text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 form-button-en hidden"
-                  >
-                    Send Message ✉️
-                  </button>
-                </form>
-              </div>
             </div>
 
             <!-- Map -->
             <div
-              class="bg-white rounded-3xl overflow-hidden shadow-2xl h-[600px] animate-on-scroll"
-              data-animation="fadeInRight"
+              class="bg-white rounded-2xl overflow-hidden shadow-lg h-[400px]"
             >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3765.0394353781603!2d97.958019!3d19.324095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDE5JzI2LjciTiA5N8KwNTcnMjguOSJF!5e0!3m2!1sen!2sth!4v1761913323578!5m2!1sen!2sth"
